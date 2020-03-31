@@ -23,22 +23,33 @@ cursor: url(working_ultra),url(arrow_ultra.cur),	pointer;
 </style>
   <div class="wrapper">
     <video id="video" class="bg-video" loop autoplay autobuffer controls>
-      <source src="timelapse.mp4" type="video/mp4">
+      <source src="" type="video/mp4">
     </video>
+		<script>
+			var videoArray = [
+			'video1.mp4',
+			'video2.mp4',
+			'video3.mp4'
+			];
+		var count = Math.floor(Math.random() * videoArray.length);
+		document.getElementsByTagName('source')[0].src = 'videos/' + videoArray[count];
+		var video = document.getElementById('video');
+		video.load();
+		video.play();
+		</script>	
 	
-	<audio controls>
- <audio  loop controls src="rabbit.mp3" ></audio>
-	</audio>
 	
   </div>
  
-  <div id="large-header" class="кто прочитал пидор"> <!ТУТ НАДА LARGE_HEADER В КАВЫЧКАХ ЕС ЧО >
+  <div id="large-header" class="кто прочитал пидор"> <!ТУТ НАДО LARGE_HEADER В КАВЫЧКАХ ЕС ЧО >
     <canvas id="demo-canvas"></canvas>
   </div>
   <div class="text-wrapper">
+    <p class="sub-title help">(update to change music)</p>
     <h1 class="main-title">OUTCUSTER <span class="thin"></span></h1>
     <p class="sub-title help">Who am I?&nbsp;&nbsp;&nbsp;I don't know either</p>
     <div class="socials">
+	
       <a href="https://vk.com/0id088" target="_blank" class="icon vk" id="vk">
         <svg  preserveAspectRatio="xMinYMin meet" viewBox="0 0 200 200" class="circle">  
           <circle cx="100" cy="100" r="50"/>
@@ -74,9 +85,14 @@ cursor: url(working_ultra),url(arrow_ultra.cur),	pointer;
           <circle cx="100" cy="100" r="50"/>
         </svg>
         <img src="img/email.svg">
-      </a>
+		      </a>
+			  
+				     
+			  
+		
     </div>
   </div>
+ 
   <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js'></script>
 <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js'></script>
 <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js'></script>
