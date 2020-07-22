@@ -25,6 +25,13 @@
   z-index: 1;
 }
 
+  A {
+    text-decoration: none; /* Убирает подчеркивание для ссылок */
+   }   A:hover { 
+    text-decoration: underline; /* Добавляем подчеркивание при наведении курсора на ссылку */
+    color: white; /* Ссылка красного цвета */
+   }
+  
 .text-wrapper {
   position: absolute;
   top: 60%;
